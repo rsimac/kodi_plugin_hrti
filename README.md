@@ -25,6 +25,7 @@ Prije koristenja potrebno je registrirati korisnicki racun na web adresi Hrvatsk
 
 ## Komentari i problemi
 * Po mogucnosti, koristiti Github sucelje i opciju Issues
+* Kodi logfile je vrlo koristan. Na windows platformi moze se naci na: `C:\Users\user\AppData\Roaming\Kodi\kodi.log`
 
 
 ## Hvala
