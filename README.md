@@ -9,7 +9,7 @@ Prije koristenja potrebno je registrirati korisnicki racun na web adresi Hrvatsk
 
 ## Instalacija
 
-* Sa ovog github portala, download file: [raw/master/plugin_video_hrti.zip](plugin_video_hrti.zip)
+* Sa ovog github portala, odaberite opciju 'Download' sa ove adrese: [plugin_video_hrti.zip](plugin_video_hrti.zip)
 * Unutar Kodi aplikacije, odaberi: Add-ons/Add on Browser
 * Install from zip file
 * Odaberi datoteku downloadanu u prvom koraku
