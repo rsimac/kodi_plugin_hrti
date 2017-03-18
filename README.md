@@ -9,7 +9,7 @@ Prije koristenja potrebno je registrirati korisnicki racun na web adresi Hrvatsk
 
 ## Instalacija
 
-* Sa ovog github portala, download file: [plugin_video_hrti.zip](plugin_video_hrti.zip)
+* Sa ovog github portala, download file: [raw/master/plugin_video_hrti.zip](plugin_video_hrti.zip)
 * Unutar Kodi aplikacije, odaberi: Add-ons/Add on Browser
 * Install from zip file
 * Odaberi datoteku downloadanu u prvom koraku
@@ -19,7 +19,8 @@ Prije koristenja potrebno je registrirati korisnicki racun na web adresi Hrvatsk
 * Unutar Kodi aplikacije, HRTi plugin, Settings, unesite korisnicko ime (email) i lozinku kojom ste se registrirali u prethodnom koraku
 
 ## Koristenje
-* Sucelje je vrlo jednostavno. Neki od video zapisa koji nisu vidljivi u katalogu mogu se pronaci putem opcije 'PRETRAGA;
+* Sucelje je vrlo jednostavno, kategorije su preuzete direktno sa HRTi sucelja, bez promjena
+* Neki od video zapisa koji nisu vidljivi u katalogu mogu se pronaci putem opcije 'PRETRAGA'
 
 
 ## Komentari i problemi
