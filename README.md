@@ -25,3 +25,7 @@ Prije koristenja potrebno je registrirati korisnicki racun na web adresi Hrvatsk
 
 ## Komentari i problemi
 * Po mogucnosti, koristiti Github sucelje i opciju Issues
+
+
+## Hvala
+Korisniku @natko1412 za inspiraciju i dijelove programa.
