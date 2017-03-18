@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="HRTi Account">
+        <setting label="User Name (email)" type="text" id="username" default=""/>
+        <setting label="Password" type="text" id="password" option="hidden" enable="!eq(-1,)" default=""/>
+        
+        <!-- Advanced user configurable paths in case web site changes, not visible in kodi but placed here for quick changes when needed-->
+        <setting id="catalog_uri" visible="false" default="https://hrti-static.hrt.hr/client_api.php/vod_catalog/structure/language/hr/application_id/all_in_one"/>
+        <setting id="category_uri" visible="false" default="https://hrti-static.hrt.hr/client_api.php/vod_catalog/search/language/hr/application_id/all_in_one/category_id/{category_id}/alternatives/true/format/json"/>
+        
+        <setting id="live_uri" visible="false" default="https://hrti-static.hrt.hr/client_api.php/channel/all/application_id/all_in_one/language/hr/format/json"/>
+        
+        
+        <setting id="live_mpd" visible="false" default="https://prd-hrt-live-2.spectar.tv/{external_id}/manifest.mpd?video_id={video_id}&authority_instance_id=spectar-prd-hrt&token={token}&token_expiration={token_expiration}&profile_id={profile_id}&application_installation_id={application_installation_id}&subscriber_id={subscriber_id}&application_id=all_in_one&channel_name={channel_name}"/>
+        
+        
+        <setting id="live_mpd_test" visible="false" default="https://prd-hrt-live-2.spectar.tv/{external_id}/manifest.mpd?video_id={video_id}token={token}&token_expiration={token_expiration}&channel_name={channel_name}"/>
+        
+
+        <setting id="playlist_uri" visible="false" default="https://prd-hrt.spectar.tv/player/get_smil/id/{video_id}/video_id/{video_id}/token/{token}/token_expiration/{token_expiration}/asset_type/Movie/playlist_template/nginx/channel_name/{channel_name}/playlist.m3u8?foo=bar"/>
+        
+        <setting id="img_uri" visible="false" default="https://hrti-static.hrt.hr/client_api.php/image/transform/tasks/thumbnail_fix/width/{width}/height/{height}/format/thumbnail/video_id/{video_id}/img_compression/{compression}"/>
+        
+        <setting id="search_uri" visible="false" default="https://hrti-static.hrt.hr/client_api.php/vod_catalog/search/language/hr/application_id/all_in_one/video_title/{search_string}/format/json" />
+
+        <!-- authentication uris -->
+        <setting id="uuid_uri" visible="false" default='https://hrti.hrt.hr/client_api.php/config/identify/format/json'/>
+        <setting id="login_uri" visible='false' default='https://hrti.hrt.hr/client_api.php/user/login/session_id/{session_id}/format/json'/>
+
+    </category>
+    
+        
+
+</settings>

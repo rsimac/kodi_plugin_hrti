@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.hrti" name="HRTi" version="0.9" provider-name="rsimac">
+
+    <requires>
+        <import addon="script.module.requests"  />
+    </requires>
+
+    <extension point="xbmc.python.pluginsource" library="hrti.py">
+        <provides>video</provides>
+    </extension>
+    
+    
+    
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">HRTi - Croatian Radio Television</summary>
+    
+        <description lang="en">Kodi addon for listening and viewing Croatian Public Radio and Television (HRT). Requires valid (free) account at Croatian Radio Television web site: www.hrti.hr</description>
+        
+        <platform>all</platform>
+        <language>en hr</language>
+        
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        
+        <source></source>
+	</extension>    
+    
+</addon>
