@@ -321,7 +321,7 @@ def main():
     
     #get config data from settings.xml, do not hardcode here
     my_addon = xbmcaddon.Addon()
-    keys = {'username', 'password', 'catalog_uri', 'category_uri', 'playlist_uri','img_uri', 'login_uri', 'uuid_uri', 'search_uri', 'live_uri', 'live_mpd'}
+    keys = ['username', 'password', 'catalog_uri', 'category_uri', 'playlist_uri','img_uri', 'login_uri', 'uuid_uri', 'search_uri', 'live_uri', 'live_mpd']
     settings = {}
     for key in keys:
         settings[key]=my_addon.getSetting(key)
