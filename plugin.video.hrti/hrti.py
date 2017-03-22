@@ -280,7 +280,7 @@ def display_episodes(cat, settings, addon_handle):
                 #converting the video title to url path component 'channel_name' as observed at site, unsure of exact regex syntax used
                 channel_name = unicode(title, errors='ignore') #removing nonascii
                 #dumb regex
-                channel_name = channel_name.lower().replace(" ","_").replace('-','').replace(':_','_').replace('(','').replace(')','').replace('/','').replace("'","")
+                channel_name = channel_name.lower().replace(" ","_").replace('-','').replace(':_','_').replace('(','').replace(')','').replace('/','').replace("'","").replace("?",'')
                 #remove leading or trailing replacements
                 channel_name = channel_name.strip('_')
                 
