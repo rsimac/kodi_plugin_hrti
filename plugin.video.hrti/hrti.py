@@ -85,6 +85,10 @@ def display_categories(parent_id, settings, addon_handle):
         search_cat = {'name': 'PRETRAGA', 'id':'search', 'display_subcategories':True, 'thumbnail':''}
         display_cats.append(search_cat)
         
+        #add the search history category
+        search_history_cat = {'name': 'POVIJEST PRETRAGA', 'id':'search_history', 'display_subcategories':True, 'thumbnail':''}
+        display_cats.append(search_history_cat)
+
         #ALSO ADD THE LIVE TV CATEGORIES
         '''
         Categories 
@@ -120,30 +124,54 @@ def display_categories(parent_id, settings, addon_handle):
         xbmcplugin.endOfDirectory(addon_handle)
         
     else:
+    	uri = None
         if parent_id=='search':
             #PSEUDO MENU, SEARCH, SHOWING AT ROOT ONLY
             dialog = xbmcgui.Dialog()
             search = dialog.input('Naslov ili dio naslova video ili audio zapisa', type=xbmcgui.INPUT_ALPHANUM)
-        
-            uri = settings['search_uri'].format(search_string=search)
+            
+            print "Search:{}".format(search)
+            
+            if search and search!="":
+                searchHistory = xbmcaddon.Addon().getSetting('search_history')
+                searchHistory = json.loads(searchHistory) if searchHistory else []
+                if search not in searchHistory:
+                    searchHistory.append(search)
+                    xbmcaddon.Addon().setSetting('search_history', json.dumps(searchHistory))
+    
+                uri = settings['search_uri'].format(search_string=search)
+
+        elif parent_id=='search_history':
+            dialog = xbmcgui.Dialog()
+        	
+            searchHistory = xbmcaddon.Addon().getSetting('search_history')
+            searchHistory = json.loads(searchHistory) if searchHistory else []
+
+            i = dialog.select("Povijest pretraga", searchHistory)
+            if i>=0:
+	            search = searchHistory[i]
+	            
+	            print 'Povijest pretraga:{}'.format(i)
+	            uri = settings['search_uri'].format(search_string=search)
+        	
         elif parent_id=='live':
             #LIVE CATEGORIES
             uri = settings['live_uri']
         else:
             #ALL OTHER, ONDEMAND CATS
             uri = settings['category_uri'].format(category_id=parent_id)
-    
-        r = urllib.urlopen(uri)
-    
-        cat = json.loads(r.read());
-    
-        print uri
-        #print json.dumps(episodes, indent=2)
 
-        if parent_id=='live':
-            display_live(cat, settings, addon_handle)
-        else:
-            display_episodes(cat, settings, addon_handle)
+
+        if uri:    
+            r = urllib.urlopen(uri)
+            cat = json.loads(r.read());
+            print uri
+         	#print json.dumps(episodes, indent=2)
+
+            if parent_id=='live':
+                display_live(cat, settings, addon_handle)
+            else:
+                display_episodes(cat, settings, addon_handle)
             
             
     return
