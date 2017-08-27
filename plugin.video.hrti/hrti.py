@@ -136,7 +136,7 @@ def display_categories(parent_id, settings, addon_handle):
                 searchHistory = xbmcaddon.Addon().getSetting('search_history')
                 searchHistory = json.loads(searchHistory) if searchHistory else []
                 if search not in searchHistory:
-                    searchHistory.append(search)
+                    searchHistory.insert(0, search)
                     xbmcaddon.Addon().setSetting('search_history', json.dumps(searchHistory))
     
                 uri = settings['search_uri'].format(search_string=search)
