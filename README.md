@@ -7,7 +7,7 @@ dostupnih javnosti na Web sucelju Hrvatske Radio Televizije hrti.hrt.hr.
 Prije koristenja potrebno je registrirati korisnicki racun na web adresi Hrvatske Radio Televizije: https://hrti.hrt.hr/
 
 
-## Instalacija
+## Instalacija i Upgrade
 
 * Sa ovog github portala, odaberite opciju 'Download' sa ove adrese: [plugin_video_hrti.zip](plugin_video_hrti.zip)
 * Unutar Kodi aplikacije, odaberi: Add-ons/Add on Browser
