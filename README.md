@@ -6,6 +6,7 @@ dostupnih javnosti na Web sucelju Hrvatske Radio Televizije hrti.hrt.hr.
 
 Prije koristenja potrebno je registrirati korisnicki racun na web adresi Hrvatske Radio Televizije: https://hrti.hrt.hr/
 
+(This is the Kodi add-on for listening and viewing publicly available audio and video contents from Croatian Radio and Television. Free account at https://hrti.hrt.hr/ is required to access the contents)
 
 ## Instalacija i Upgrade
 
@@ -30,3 +31,9 @@ Prije koristenja potrebno je registrirati korisnicki racun na web adresi Hrvatsk
 
 ## Hvala
 Korisniku @natko1412 za inspiraciju i dijelove programa.
+
+## Donacije
+Ako nalazite ovaj add-on korisnim, unaprijed zahvaljujem na donaciji!
+(If you found this add-on useful, thanks much in advance for donations!)
+
+https://www.paypal.me/rsimac
