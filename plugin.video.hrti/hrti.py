@@ -324,10 +324,21 @@ def display_episodes(cat, settings, addon_handle):
 
                 for actor in video['credits']['actors']:
                     info['cast'].append(actor['name'])
-                
                         
                 li = xbmcgui.ListItem(title, iconImage=img)
                 li.setInfo("video", info)
+                
+                try:
+                    #load the subtitles for each video by looking up its detailed data, this may be slow
+                    video_uri = settings['video_uri'].format(video_id=episode_id)
+                    video_data = urllib.urlopen(video_uri).read()
+                    video_data = json.loads(video_data)
+                    subtitle_uri = video_data['video'][0]['video_assets']['movie'][0]['closed_captions'][0]['file']
+                    subtitle_lang = video_data['video'][0]['video_assets']['movie'][0]['closed_captions'][0]['culture']
+                    li.setSubtitles([subtitle_uri])
+                except Exception as e:
+                    pass
+                    
                 
                 xbmcplugin.addDirectoryItem(handle=addon_handle, url=url, listitem=li, isFolder=False)
                 
@@ -349,7 +360,7 @@ def main():
     
     #get config data from settings.xml, do not hardcode here
     my_addon = xbmcaddon.Addon()
-    keys = ['username', 'password', 'catalog_uri', 'category_uri', 'playlist_uri','img_uri', 'login_uri', 'uuid_uri', 'search_uri', 'live_uri', 'live_mpd']
+    keys = ['username', 'password', 'catalog_uri', 'category_uri', 'playlist_uri','img_uri', 'login_uri', 'uuid_uri', 'search_uri', 'live_uri', 'live_mpd', 'video_uri']
     settings = {}
     for key in keys:
         settings[key]=my_addon.getSetting(key)

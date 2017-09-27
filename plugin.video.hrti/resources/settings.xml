@@ -6,8 +6,15 @@
         
         <!-- Advanced user configurable paths in case web site changes, not visible in kodi but placed here for quick changes when needed-->
         <setting id="catalog_uri" visible="false" default="https://hrti-static.hrt.hr/client_api.php/vod_catalog/structure/language/hr/application_id/all_in_one"/>
-        <setting id="category_uri" visible="false" default="https://hrti-static.hrt.hr/client_api.php/vod_catalog/search/language/hr/application_id/all_in_one/category_id/{category_id}/alternatives/true/format/json"/>
         
+        <!--
+        <setting id="category_uri" visible="false" default="https://hrti-static.hrt.hr/client_api.php/vod_catalog/search/language/hr/application_id/all_in_one/category_id/{category_id}/alternatives/true/format/json"/>
+        -->
+        <setting id="category_uri" visible="false" default="https://hrti-static.hrt.hr/client_api.php/vod_catalog/search/language/hr/application_id/all_in_one/http_proto/https/category_id/{category_id}/format/json"/>
+        
+        <!-- individual video details -->
+        <setting id="video_uri" visible="false" default="https://hrti-static.hrt.hr/client_api.php/vod_catalog/search/language/hr/application_id/all_in_one/http_proto/https/video_id/{video_id}/format/json"/>
+
         <setting id="live_uri" visible="false" default="https://hrti-static.hrt.hr/client_api.php/channel/all/application_id/all_in_one/language/hr/format/json"/>
         
         
@@ -21,8 +28,11 @@
         
         <setting id="img_uri" visible="false" default="https://hrti-static.hrt.hr/client_api.php/image/transform/tasks/thumbnail_fix/width/{width}/height/{height}/format/thumbnail/video_id/{video_id}/img_compression/{compression}"/>
         
+        <!--
         <setting id="search_uri" visible="false" default="https://hrti-static.hrt.hr/client_api.php/vod_catalog/search/language/hr/application_id/all_in_one/video_title/{search_string}/format/json" />
-
+        -->
+        <setting id="search_uri" visible="false" default="https://hrti-static.hrt.hr/client_api.php/vod_catalog/search/language/hr/application_id/all_in_one/http_proto/https/video_title/{search_string}/format/json"/>
+        
         <!-- authentication uris -->
         <setting id="uuid_uri" visible="false" default='https://hrti.hrt.hr/client_api.php/config/identify/format/json'/>
         <setting id="login_uri" visible='false' default='https://hrti.hrt.hr/client_api.php/user/login/session_id/{session_id}/format/json'/>
