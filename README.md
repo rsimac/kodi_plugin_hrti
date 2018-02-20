@@ -1,7 +1,7 @@
 # kodi_plugin_hrti
 Kodi Plugin for Croatian Public Radio And Television (HRT)
 
-Ovo je jednostavni plugin za Kodi aplikaciju kojim se omogucuje pregled video i audio sadrzaja
+Ovo je jednostavni plugin za Kodi aplikaciju (https://kodi.tv/) kojim se omogucuje pregled video i audio sadrzaja
 dostupnih javnosti na Web sucelju Hrvatske Radio Televizije hrti.hrt.hr.
 
 Prije koristenja potrebno je registrirati korisnicki racun na web adresi Hrvatske Radio Televizije: https://hrti.hrt.hr/
