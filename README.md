@@ -1,3 +1,5 @@
+**POZOR: Od sredine 2018, ovaj plugin vise nije funkcionalan zbog promjenjene strukture HRT web site.**
+
 # kodi_plugin_hrti
 Kodi Plugin for Croatian Public Radio And Television (HRT)
 
